@@ -83,7 +83,8 @@ class Dog extends React.Component {
         super(props);
         // Initialise state
         this.state = {
-            name
+            name: 'Benny',
+            age: '2'
         }
     }
 }
@@ -109,4 +110,17 @@ increment() = {
 
 ## Lifecycle Methods/Hooks
 - A hook captured a component at a certain point in its lifecycle, e.g. when it updates, renders, etc.
-- 
+
+## Styling
+- React utilises inline styling, similar to inline CSS, except a JavaScript object is used as the style parameter, e.g.
+```javascript
+<div style={{color: "black", fontSize: 14}}>
+```
+- Stylenames do not use kebab-case, but instead use camel-case naming convention
+- property value length units are assumed to be in px unless specified otherwise
+- length units must be specified within double quotes
+- Since styles are JavaScript objects, they can be stored in variables, and assigned as so
+
+## Conditionals
+- {condition && <div>A parent component</div>}, where the markup/component will be rendered if the condition is true
+- Ternary conditionals, i.e. `condition ? expressionIfTrue : expressionIfFalse
